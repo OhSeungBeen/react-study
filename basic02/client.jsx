@@ -7,5 +7,6 @@ import Step03 from './Step03';
 import Step04 from './Step04';
 import Step05 from './Step05';
 import Step06 from './Step06';
+import Step07 from './Step07';
 
-ReactDOM.render(<Step06 />, document.querySelector('#root'));
+ReactDOM.render(<Step07 />, document.querySelector('#root'));
