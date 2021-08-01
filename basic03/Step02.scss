@@ -1,0 +1,42 @@
+$red: #fa5252;
+$orange: #fcc419;
+$green: #40c057;
+
+// 믹스인
+// 재사용되는 스타일 블록을 함수처럼 사용
+@mixin square($size) {
+  $calculated: 32px * $size;
+  width: $calculated;
+  height: $calculated;
+}
+
+.SassComponent {
+  display: flex;
+  .box {
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    &.red {
+      // .red 클래스가 .box와 함께 사용되었을 때
+      background: $red;
+      @include square(1);
+    }
+
+    &.orange {
+      // .orange 클래스가 .box와 함께 사용되었을 때
+      background: $orange;
+      @include square(2);
+    }
+
+    &.green {
+      // .orange 클래스가 .box와 함께 사용되었을 때
+      background: $green;
+      @include square(3);
+    }
+
+    &:hover {
+      // .bax 클래스 hover
+      background: black;
+    }
+  }
+}
