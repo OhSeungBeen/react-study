@@ -1,0 +1,18 @@
+.wrapper {
+  background: black;
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+}
+
+/* 글로벌 CSS 적용 */
+:global .somthing {
+  font-weight: 800;
+  color: aqua;
+}
+
+.inverted {
+  color: black;
+  background: white;
+  border: 1px solid black;
+}
