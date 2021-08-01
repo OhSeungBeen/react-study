@@ -23,8 +23,10 @@
     "css-loader": "^5.2.6",
     "mini-css-extract-plugin": "^2.1.0",
     "react-refresh": "^0.10.0",
+    "sass": "^1.37.0",
+    "sass-loader": "^12.1.0",
     "style-loader": "^3.0.0",
-    "webpack": "^5.42.1",
+    "webpack": "^5.47.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   }
