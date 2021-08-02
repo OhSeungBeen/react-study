@@ -22,14 +22,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import Step01 from './Step01.jsx';
+import Step01 from './Step01';
+import Step02 from './Step02';
 
 ReactDOM.render(
   // 라우터를 적용할때는 index파일에서 react-router-dom에 내장되어 있는 BrowserRouter 컴포넌트로 감싸면 된다.
   // BrowserRouter 컴포넌트를 이용하면 HTML5에 History API를 사용하여 페이지를 새로고침 하지 않고도 주소를 변경하고,
   // 현재 주소에 관련된 정보를  props로 쉽게 조회하거나 사용할 수 있도록 해 준다.
   <BrowserRouter>
-    <Step01 />
+    <Step02 />
   </BrowserRouter>,
   document.querySelector('#root')
 );
