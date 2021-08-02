@@ -71,5 +71,9 @@ module.exports = {
   devServer: {
     publicPath: '/dist/',
     hot: true,
+    // historyApiFallback
+    // HTML5의 History API를 사용하는 경우에 설정해놓은 url 이외의 url 경로로 접근했을때 404 responses를 받게 되는데
+    // 이때도 index.html을 서빙할지 결정하는 옵션이다.
+    historyApiFallback: true,
   },
 };
