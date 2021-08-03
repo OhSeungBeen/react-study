@@ -26,13 +26,14 @@ import Step01 from './Step01';
 import Step02 from './Step02';
 import Step03 from './Step03';
 import Step04 from './Step04';
+import Step05 from './Step05';
 
 ReactDOM.render(
   // 라우터를 적용할때는 index파일에서 react-router-dom에 내장되어 있는 BrowserRouter 컴포넌트로 감싸면 된다.
   // BrowserRouter 컴포넌트를 이용하면 HTML5에 History API를 사용하여 페이지를 새로고침 하지 않고도 주소를 변경하고,
   // 현재 주소에 관련된 정보를  props로 쉽게 조회하거나 사용할 수 있도록 해 준다.
   <BrowserRouter>
-    <Step04 />
+    <Step05 />
   </BrowserRouter>,
   document.querySelector('#root')
 );
