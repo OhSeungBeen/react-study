@@ -10,7 +10,7 @@ module.exports = {
   },
 
   entry: {
-    app: ['./client'],
+    app: ['babel-polyfill', './client'],
   },
   module: {
     rules: [
@@ -30,7 +30,10 @@ module.exports = {
             ],
             '@babel/preset-react',
           ],
-          plugins: ['@babel/plugin-proposal-class-properties', 'react-refresh/babel'],
+          plugins: [
+            '@babel/plugin-proposal-class-properties',
+            'react-refresh/babel',
+          ],
         },
       },
       {

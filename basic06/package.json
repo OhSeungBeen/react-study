@@ -9,6 +9,8 @@
   "author": "SeungBeenOh",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "babel-polyfill": "^6.26.0",
     "file-loader": "^6.2.0",
     "immer": "^9.0.5",
     "prop-types": "^15.7.2",
