@@ -1,23 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import { createLogger } from 'redux-logger';
+import ReduxThunk from 'redux-thunk';
 
 import Step01 from './Step01';
 
-// Provider 컴포넌트를 사용할 수 있도록 App컴포넌트를 react-redux에서 제공하는 Provider 컴포넌트로 감싸 준다.
-// Provider 컴포넌트를 사용할 때는 store를 props로 전달해 주어야 한다.
 import Step02 from './Step02/Step02';
 // import rootReducer from './Step02/modules';
 // const store = createStore(rootReducer);
 
 import Step03 from './Step03/Step03';
-import rootReducer from './Step03/modules';
-const store = createStore(rootReducer);
+// import rootReducer from './Step03/modules';
+// const store = createStore(rootReducer);
+
+import Step04 from './Step04/Step04';
+import rootReducer from './Step04/modules';
+import loggerMiddleware from './Step04/lib/loggerMiddleware';
+// logger 미들웨어 추가
+const logger = createLogger();
+const store = createStore(
+  rootReducer,
+  applyMiddleware(/*loggerMiddleware*/ logger, ReduxThunk)
+);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Step03 />
+    <Step04 />
   </Provider>,
   document.querySelector('#root')
 );
